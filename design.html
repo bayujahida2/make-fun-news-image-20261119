@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>World News — 19 November 2026</title>
+<title>The World in One Day — 19 November 2026</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
@@ -11,103 +11,205 @@
     font-family: Arial, Helvetica, sans-serif;
     display: flex; flex-direction: column;
   }
-  header {
-    background: #10233f; color: #fff; padding: 30px 44px 24px;
-  }
+  header { background: #10233f; color: #fff; padding: 12px 36px 10px; }
   header .mast {
     font-family: Georgia, 'Times New Roman', serif;
-    font-size: 68px; font-weight: bold; letter-spacing: 6px; line-height: 1;
+    font-size: 40px; font-weight: bold; letter-spacing: 5px; line-height: 1;
   }
   header .date {
-    margin-top: 12px; font-size: 36px; font-weight: bold;
-    letter-spacing: 3px; color: #f5c542;
+    margin-top: 8px; font-size: 19px; font-weight: bold;
+    letter-spacing: 2px; color: #f5c542;
   }
-  header .sub {
-    margin-top: 7px; font-size: 21px; color: #c9d4e6; letter-spacing: 1px;
+  header .regions {
+    margin-top: 6px; font-size: 13px; letter-spacing: 1px; color: #c9d4e6;
   }
-  .lead {
-    padding: 26px 44px 22px;
-    border-bottom: 3px solid #10233f;
+  header .regions b { color: #fff; }
+  .stats {
+    display: flex; padding: 7px 36px 6px;
+    border-bottom: 2px solid #10233f; background: #fffdf6;
   }
-  .kicker {
-    font-size: 22px; font-weight: bold; letter-spacing: 4px; color: #b91c1c;
-  }
-  .lead h1 {
+  .stat { flex: 1; text-align: center; }
+  .stat + .stat { border-left: 1px solid #d8d2c2; }
+  .stat .n {
     font-family: Georgia, 'Times New Roman', serif;
-    font-size: 54px; line-height: 1.1; margin-top: 10px;
+    font-size: 26px; font-weight: bold; color: #b91c1c; line-height: 1;
   }
-  .lead p { font-size: 24px; line-height: 1.35; margin-top: 11px; color: #333; }
+  .stat .l { font-size: 11px; color: #555; margin-top: 3px; line-height: 1.2; }
+  .heroes {
+    display: flex; gap: 22px; padding: 10px 36px 8px;
+    border-bottom: 2px solid #10233f;
+  }
+  .hero { flex: 1; border-top: 4px solid #10233f; padding-top: 7px; }
+  .hero .icon { width: 40px; height: 40px; margin-bottom: 4px; }
+  .hero .kick { font-size: 11px; font-weight: bold; letter-spacing: 2px; color: #b91c1c; }
+  .hero h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 22px; line-height: 1.12; margin-top: 3px;
+  }
+  .hero p { font-size: 14px; line-height: 1.3; margin-top: 5px; color: #333; }
   .grid {
-    display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 0 36px;
-    padding: 20px 44px 16px; flex: 1;
+    display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(5, 1fr);
+    gap: 0 28px; padding: 6px 36px 4px; flex: 1;
   }
-  .card { border-top: 4px solid #10233f; padding: 14px 0 8px; }
-  .card .icon { float: left; width: 60px; height: 60px; margin: 4px 14px 0 0; }
-  .card h2 {
-    font-family: Georgia, 'Times New Roman', serif;
-    font-size: 33px; line-height: 1.12; margin-left: 74px;
+  .item { border-top: 1px solid #c9c2b0; padding: 5px 0 0; }
+  .item .no { color: #b91c1c; font-weight: bold; font-size: 14px; }
+  .item h3 { display: inline; font-size: 15px; line-height: 1.2; }
+  .item p { font-size: 12.5px; line-height: 1.25; color: #444; margin-top: 1px; }
+  .mapsec { padding: 4px 36px 0; }
+  .secttl {
+    font-size: 12px; font-weight: bold; letter-spacing: 2px; color: #10233f;
+    margin-bottom: 3px;
   }
-  .card p { font-size: 21px; line-height: 1.3; margin: 9px 0 0 74px; color: #333; }
-  footer {
-    background: #10233f; color: #fff; padding: 20px 44px 22px;
+  .secttl span { color: #b91c1c; }
+  .also { padding: 4px 36px 6px; }
+  .also .cols {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0 18px;
+    font-size: 12px; line-height: 1.45;
   }
-  footer .also { font-size: 21px; line-height: 1.45; }
-  footer .also b { color: #f5c542; letter-spacing: 2px; }
-  footer .src { margin-top: 11px; font-size: 16px; color: #9fb0c9; }
+  .also .cols b { color: #b91c1c; }
+  footer { background: #10233f; color: #fff; padding: 8px 36px 10px; }
+  footer .dc { font-size: 12px; line-height: 1.35; }
+  footer .dc b { color: #f5c542; letter-spacing: 1px; }
+  footer .note { font-size: 11px; color: #c9d4e6; margin-top: 4px; line-height: 1.3; }
+  footer .src { font-size: 10.5px; color: #9fb0c9; margin-top: 3px; }
 </style>
 </head>
 <body>
 <header>
-  <div class="mast">WORLD NEWS</div>
-  <div class="date">THURSDAY, 19 NOVEMBER 2026</div>
-  <div class="sub">The day&rsquo;s top stories, from Vice City to Shenzhen</div>
+  <div class="mast">THE WORLD IN ONE DAY</div>
+  <div class="date">THURSDAY, 19 NOVEMBER 2026 &middot; 36 STORIES &middot; 6 CONTINENTS</div>
+  <div class="regions"><b>ASIA-PACIFIC 14</b> &middot; <b>AMERICAS 9</b> &middot; <b>EUROPE 4</b> &middot; <b>MIDDLE EAST 3</b> &middot; <b>OCEANIA 3</b> &middot; <b>AFRICA 2</b> &middot; <b>WORLD 1</b></div>
 </header>
 
-<section class="lead">
-  <div class="kicker">GTA VI LAUNCHES</div>
-  <h1>Grand Theft Auto VI launches worldwide after 13 years</h1>
-  <p>Rockstar&rsquo;s game unlocks at midnight market by market, starting in New Zealand; Sensor Tower estimates about 17 million copies already sold.</p>
+<section class="stats">
+  <div class="stat"><div class="n">$81.3bn</div><div class="l">Anthropic IPO,<br>largest ever</div></div>
+  <div class="stat"><div class="n">15.9m</div><div class="l">GTA VI pre-orders<br>before launch</div></div>
+  <div class="stat"><div class="n">47,000</div><div class="l">evacuated ahead<br>of Cyclone Akvan</div></div>
+  <div class="stat"><div class="n">730,000</div><div class="l">Rohingya fled<br>Myanmar in 2017</div></div>
+  <div class="stat"><div class="n">$190.4m</div><div class="l">Van Gogh auction<br>record</div></div>
+  <div class="stat"><div class="n">13 years</div><div class="l">wait for<br>GTA VI</div></div>
+</section>
+
+<section class="heroes">
+  <div class="hero">
+    <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="#10233f" stroke-width="2.5" stroke-linecap="round">
+      <path d="M6 40 H42"/><path d="M12 40 V20 M24 40 V14 M36 40 V20"/>
+      <path d="M12 20 h8 M24 14 h8 M36 20 h6" stroke="#b91c1c"/>
+      <rect x="12" y="16" width="8" height="6" fill="#b91c1c" stroke="none"/>
+      <rect x="24" y="10" width="8" height="6" fill="#10233f" stroke="none"/>
+      <rect x="36" y="16" width="6" height="6" fill="#b91c1c" stroke="none"/>
+    </svg>
+    <div class="kick">1 &middot; SHENZHEN</div>
+    <h2>Trump, Xi and Putin meet as a trio</h2>
+    <p>First three-way summit of the three leaders; nuclear arms, Ukraine, Iran and AI on the table.</p>
+  </div>
+  <div class="hero">
+    <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="#10233f" stroke-width="2.5" stroke-linecap="round">
+      <rect x="6" y="14" width="36" height="22" rx="10"/>
+      <path d="M16 22 v8 M12 26 h8" stroke="#b91c1c"/>
+      <circle cx="31" cy="23" r="2.4" fill="#b91c1c" stroke="none"/>
+      <circle cx="36" cy="28" r="2.4" fill="#b91c1c" stroke="none"/>
+    </svg>
+    <div class="kick">2 &middot; VICE CITY</div>
+    <h2>GTA VI launches after 13 years</h2>
+    <p>Midnight unlocks market by market from New Zealand; 15.9m pre-orders worth $1.54bn; Metacritic 99.</p>
+  </div>
+  <div class="hero">
+    <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="#10233f" stroke-width="2.5" stroke-linecap="round">
+      <path d="M8 40 H42"/><path d="M12 40 V28 M22 40 V20 M32 40 V14"/>
+      <path d="M10 18 L24 10 L40 6" stroke="#b91c1c"/>
+      <path d="M34 6 h6 v6" stroke="#b91c1c"/>
+    </svg>
+    <div class="kick">3 &middot; NASDAQ</div>
+    <h2>Anthropic IPO raises $81.3bn</h2>
+    <p>Largest IPO on record at $83 a share; ANT debuts on Nasdaq, valued near $1.5tn.</p>
+  </div>
 </section>
 
 <section class="grid">
-  <div class="card">
-    <svg class="icon" viewBox="0 0 52 52" fill="none" stroke="#b91c1c" stroke-width="3" stroke-linecap="round">
-      <path d="M8 40 H44"/><path d="M14 40 V22 M38 40 V22"/><path d="M14 22 H38"/><path d="M14 28 Q26 34 38 28" stroke-dasharray="3 3"/><path d="M26 22 V14" />
-    </svg>
-    <h2>Kerch Bridge hit a third time this week</h2>
-    <p>Traffic halted again, hours before Putin meets Trump and Xi in Shenzhen.</p>
-  </div>
-  <div class="card">
-    <svg class="icon" viewBox="0 0 52 52" fill="none" stroke="#10233f" stroke-width="3" stroke-linecap="round">
-      <path d="M10 44 V18 M26 44 V12 M42 44 V18"/><path d="M6 18 h10 M22 12 h10 M38 18 h10" stroke="#b91c1c"/>
-      <rect x="6" y="14" width="10" height="7" fill="#b91c1c" stroke="none"/>
-      <rect x="22" y="8" width="10" height="7" fill="#10233f" stroke="none"/>
-      <rect x="38" y="14" width="10" height="7" fill="#b91c1c" stroke="none"/>
-    </svg>
-    <h2>Trump, Xi and Putin meet in Shenzhen</h2>
-    <p>First three-way talks of the three leaders, on the APEC sidelines.</p>
-  </div>
-  <div class="card">
-    <svg class="icon" viewBox="0 0 52 52" fill="none" stroke="#10233f" stroke-width="3" stroke-linecap="round">
-      <rect x="8" y="18" width="36" height="26"/><path d="M8 26 h36"/><path d="M20 12 h12 v6" />
-      <path d="M18 34 l5 5 8 -10" stroke="#b91c1c"/>
-    </svg>
-    <h2>Democrats nominate Jeffries for U.S. Speaker</h2>
-    <p>He would be the first African-American Speaker if the House elects him.</p>
-  </div>
-  <div class="card">
-    <svg class="icon" viewBox="0 0 52 52" fill="none" stroke="#10233f" stroke-width="3" stroke-linecap="round">
-      <circle cx="26" cy="26" r="10" fill="#b91c1c" stroke="none"/>
-      <path d="M26 8 v8 M26 36 v8 M8 26 h8 M36 26 h8 M13 13 l6 6 M33 33 l6 6 M39 13 l-6 6 M19 33 l-6 6"/>
-    </svg>
-    <h2>Anthropic raises $81.3bn in biggest IPO ever</h2>
-    <p>The AI firm&rsquo;s listing tops every previous flotation, Al Jazeera reports.</p>
+  <div class="item"><span class="no">4.</span> <h3>World Court rules on Rohingya genocide</h3><p>Judges decide Gambia&rsquo;s 2019 case against Myanmar at The Hague.</p></div>
+  <div class="item"><span class="no">5.</span> <h3>COP31 enters final 48 hours</h3><p>$120bn-a-year adaptation finance still unresolved in Bel&eacute;m.</p></div>
+  <div class="item"><span class="no">6.</span> <h3>Cyclone Akvan nears Odisha coast</h3><p>47,000 evacuated; landfall Friday, winds to 110 km/h.</p></div>
+  <div class="item"><span class="no">7.</span> <h3>Van Gogh sells for record $190.4m</h3><p>&ldquo;Ch&acirc;taigniers en fleurs&rdquo; tops the artist&rsquo;s auction record at Sotheby&rsquo;s.</p></div>
+  <div class="item"><span class="no">8.</span> <h3>Kerch Bridge hit a third time</h3><p>Railway section struck overnight; traffic halted again.</p></div>
+  <div class="item"><span class="no">9.</span> <h3>Allies meet in Berlin on Ukraine</h3><p>Germany, France, UK, Poland, Italy weigh security guarantees.</p></div>
+  <div class="item"><span class="no">10.</span> <h3>Florida floods close schools</h3><p>Miami-Dade and Broward shut; up to 2 ft more rain forecast.</p></div>
+  <div class="item"><span class="no">11.</span> <h3>Houthi missile threatens Riyadh</h3><p>Boom heard, debris falls; Saudi jets strike Sanaa in reply.</p></div>
+  <div class="item"><span class="no">12.</span> <h3>India, Japan hold 2+2 talks</h3><p>Fourth edition in Tokyo: defence tech, chips, maritime security.</p></div>
+  <div class="item"><span class="no">13.</span> <h3>Tanker struck near Strait of Hormuz</h3><p>Projectile hits engine room off Khasab; crew safe.</p></div>
+</section>
+
+<section class="mapsec">
+  <div class="secttl">WHERE IT HAPPENED <span>&middot; STORIES 1&ndash;13</span></div>
+  <svg width="952" height="116" viewBox="0 0 952 116">
+    <rect x="0" y="0" width="952" height="116" fill="#e8eef4"/>
+    <g fill="#c3cfdb">
+      <ellipse cx="140" cy="22" rx="102" ry="17"/>
+      <ellipse cx="214" cy="37" rx="84" ry="14"/>
+      <ellipse cx="326" cy="71" rx="56" ry="22"/>
+      <ellipse cx="516" cy="23" rx="65" ry="12"/>
+      <ellipse cx="516" cy="55" rx="88" ry="23"/>
+      <ellipse cx="763" cy="33" rx="186" ry="23"/>
+      <ellipse cx="828" cy="74" rx="54" ry="10"/>
+      <ellipse cx="930" cy="81" rx="13" ry="6"/>
+    </g>
+    <g font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">
+      <circle cx="777" cy="43" r="8" fill="#b91c1c" stroke="#fff" stroke-width="1.5"/><text x="777" y="47" fill="#fff">1</text>
+      <circle cx="937" cy="82" r="8" fill="#b91c1c" stroke="#fff" stroke-width="1.5"/><text x="937" y="86" fill="#fff">2</text>
+      <circle cx="279" cy="30" r="8" fill="#b91c1c" stroke="#fff" stroke-width="1.5"/><text x="279" y="34" fill="#fff">3</text>
+      <circle cx="488" cy="25" r="8" fill="#b91c1c" stroke="#fff" stroke-width="1.5"/><text x="488" y="29" fill="#fff">4</text>
+      <circle cx="349" cy="59" r="8" fill="#b91c1c" stroke="#fff" stroke-width="1.5"/><text x="349" y="63" fill="#fff">5</text>
+      <circle cx="703" cy="45" r="8" fill="#b91c1c" stroke="#fff" stroke-width="1.5"/><text x="703" y="49" fill="#fff">6</text>
+      <circle cx="293" cy="39" r="8" fill="#b91c1c" stroke="#fff" stroke-width="1.5"/><text x="293" y="43" fill="#fff">7</text>
+      <circle cx="573" cy="27" r="8" fill="#b91c1c" stroke="#fff" stroke-width="1.5"/><text x="573" y="31" fill="#fff">8</text>
+      <circle cx="512" cy="24" r="8" fill="#b91c1c" stroke="#fff" stroke-width="1.5"/><text x="512" y="28" fill="#fff">9</text>
+      <circle cx="264" cy="42" r="8" fill="#b91c1c" stroke="#fff" stroke-width="1.5"/><text x="264" y="46" fill="#fff">10</text>
+      <circle cx="599" cy="42" r="8" fill="#b91c1c" stroke="#fff" stroke-width="1.5"/><text x="599" y="46" fill="#fff">11</text>
+      <circle cx="844" cy="35" r="8" fill="#b91c1c" stroke="#fff" stroke-width="1.5"/><text x="844" y="39" fill="#fff">12</text>
+      <circle cx="625" cy="41" r="8" fill="#b91c1c" stroke="#fff" stroke-width="1.5"/><text x="625" y="45" fill="#fff">13</text>
+    </g>
+  </svg>
+</section>
+
+<section class="also">
+  <div class="secttl">ALSO ON THURSDAY 19 NOVEMBER <span>&middot; 23 MORE STORIES</span></div>
+  <div class="cols">
+    <div>
+      <b>14.</b> Xi pledges $20m for APEC<br>
+      <b>15.</b> Hormuz oil flows back to normal<br>
+      <b>16.</b> India bowl first in Wellington Test<br>
+      <b>17.</b> Modi opens FICCI centenary meet<br>
+      <b>18.</b> Sudan blames Ethiopia, UAE for drones<br>
+      <b>19.</b> Challenger rebuffs $5.48bn takeover<br>
+      <b>20.</b> Australia jobless hits 4.9%<br>
+      <b>21.</b> Trump, Putin hold one-on-one
+    </div>
+    <div>
+      <b>22.</b> EU panel votes on Space Act<br>
+      <b>23.</b> 5.7 quake shakes Kumamoto<br>
+      <b>24.</b> Seoul enacts special counsel law<br>
+      <b>25.</b> Seven missing off Taean coast<br>
+      <b>26.</b> Lula to sign 5x2 workweek decree<br>
+      <b>27.</b> SpaceX to launch classified USSF-317<br>
+      <b>28.</b> 5.3 quake off North Sumatra<br>
+      <b>29.</b> US chip-access curbs take effect
+    </div>
+    <div>
+      <b>30.</b> Trump rifts with Vance, praises Rubio<br>
+      <b>31.</b> Delhi schools reopen offline<br>
+      <b>32.</b> EPFO pensions may cost ₹1.1 lakh crore<br>
+      <b>33.</b> Trump, Carney meet 20 minutes<br>
+      <b>34.</b> Takaichi, Putin talk in Shenzhen<br>
+      <b>35.</b> WFP feeds 30,000 displaced in Sudan<br>
+      <b>36.</b> F1 Las Vegas practice begins
+    </div>
   </div>
 </section>
 
 <footer>
-  <div class="also"><b>ALSO&nbsp;&nbsp;</b>U.S. and Iran trade fire for a third day &middot; Voyager 1 passes one light-day from Earth &middot; EU proposes &euro;45bn Ukraine loan &middot; Four nations urge Israel to let aid into flooded Gaza</div>
-  <div class="src">Sources: Reuters &middot; Associated Press &middot; CNN &middot; BBC &middot; Al Jazeera &middot; 19 November 2026</div>
+  <div class="dc"><b>DATE CHECK &mdash; LEFT OUT ON PURPOSE:</b> they broke before today: Jeffries nominated for Speaker (18 Nov) &middot; Voyager 1 passes one light-day (18 Nov) &middot; Pew: Islam largest faith by 2035 (18 Nov) &middot; EU &euro;45bn Ukraine loan (18 Nov) &middot; Nvidia&rsquo;s $115.8bn quarter (18 Nov) &middot; Kerch spans fell (17 Nov) &middot; Gaza tanks cross Yellow Line (18 Nov) &middot; UK inflation 3.6% (18 Nov)</div>
+  <div class="note">Every story here happened, or was first reported, on Thursday 19 November 2026. Disputed claims are attributed, not stated as fact.</div>
+  <div class="src">Sources: Reuters &middot; Associated Press &middot; AFP &middot; BBC &middot; CNN &middot; Al Jazeera &middot; The Hindu &middot; Bloomberg &middot; NHK &middot; ABS &middot; WFP</div>
 </footer>
 </body>
 </html>
